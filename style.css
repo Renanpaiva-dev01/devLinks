@@ -29,6 +29,7 @@ body {
   background-position: top center;
   background-size: cover;
   */
+  height: 100vh;
   background: var(--bg-url) no-repeat top center/cover;
 }
 body * {
@@ -36,7 +37,7 @@ body * {
   color: var(--text-color);
 }
 #container {
-  width: 360px;
+  width: 100%;
   max-width: 588px;
   /*border: 1px solid red;*/
   margin: auto;
@@ -172,4 +173,17 @@ footer ion-icon {
 }
 footer a {
   padding-left: 5px;
+}
+
+/* Media queries: só funciona quando há essa linha no HTML: 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+*/
+@media(min-width: 700px){
+  :root{
+    --bg-url:url(./assets/bg-desktop.jpg);
+  }
+
+  .light{
+    --bg-url:url(./assets/bg-desktop-light.jpg);
+  }
 }
